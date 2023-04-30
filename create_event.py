@@ -17,11 +17,11 @@ def main():
 
    event_result = service.events().insert(calendarId='primary',
        body={
-           "summary": 'brand new event',
+           "summary": 'testing iso date format',
            "location": '800 Howard St., San Francisco, CA 94103',
            "description": 'we are just making sure for sure this works',
-           "start": {"dateTime": start, "timeZone": 'America/Los_Angeles'},
-           "end": {"dateTime": end, "timeZone": 'America/Los_Angeles'},
+           "start": {"dateTime": '2023-05-01T10:00:00', "timeZone": 'America/Los_Angeles'},
+           "end": {"dateTime": '2023-05-01T11:00:00', "timeZone": 'America/Los_Angeles'},
        }
    ).execute()
 
